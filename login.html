@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/handcash.css" rel="stylesheet">
+    <style>
+        .flex_container{
+            height: 300px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="redirect" style="text-align:center;">Redirecting...</p>
+    <div id="login" class='flex_container' style="display:none;">
+        <h2>Login</h2>
+        <div id="connectButton">HandCash</div>
+    </div>
+    <script>
+        var x = location.search
+        window.onload = async function(){
+            let authToken = getUrlVars()["authToken"]
+            if(authToken){
+                sessionStorage.setItem('HandCashAuthToken',authToken)
+                location.href='index.html?ori=' + sessionStorage.site
+            }else{
+                document.getElementById('login').style.display = "flex"
+                document.getElementById('redirect').style.display = "none"
+            }
+        }
+        //Query String
+        function getUrlVars() {
+            var vars = {}
+            var str = window.location.href
+            var res = str.replace("%26", "&")
+            var res = res.replace("%3D","=")
+            var parts = res.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value
+            })
+            return vars
+        }
+        //HandCash
+        const connectButton = document.getElementById('connectButton');
+        function connectWithHandCash() {
+            location.href = 'https://app.handcash.io/#/authorizeApp?appId=' + '60bffa9d8180660b50939208';
+        }
+        connectButton.addEventListener('click', connectWithHandCash, false);
+
+    </script>
+</body>

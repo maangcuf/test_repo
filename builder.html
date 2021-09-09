@@ -1,0 +1,416 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsite Builder</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/basic.css" rel="stylesheet">
+    <script src="https://unpkg.com/bsv"></script>
+    <script src="https://unpkg.com/txforge"></script>
+    <script src="https://unpkg.com/paypresto.js"></script>
+    <style>
+        body{
+            font-family:  sans-serif;
+        }
+        h1,h2,h3{
+            text-align:center;
+            margin:30px;
+        }
+        .demo{
+            font-size:0.5em;
+            margin: 10px;
+            padding: 8px;
+            color: #333;
+            border-radius: 10px;
+            background-color: violet;
+        }
+        .material-icons{
+            font-size: 36px;
+        }
+        .hero{
+            padding:10 0px;
+            color:#333;
+        }
+        .rib{
+            height:3px;
+            background-image:linear-gradient(to right, blueviolet, violet);
+        }
+        .icontext_container{
+            display: flex;
+            text-align:center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        .icontext_container div{
+            margin: 10px;
+            width: 90px;
+            padding:20px 8px 4px;
+            border-radius:5px;
+            background-color:#f9f5fd;
+        }
+        .bor{
+            border: 1px solid blueviolet;
+            border-radius: 5px;
+            margin: 40px;
+            padding: 20px; 
+        }
+        .flex_container{
+            display: flex;
+            justify-content: center;
+        }
+        .onecolumn_container{
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+        }
+        .preview_container{
+            display: flex;
+            justify-content: center;
+        }
+        @media only screen and (max-width: 900px) {
+            .preview_container{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .preview_container iframe{
+                width:90%;
+                height:300px;
+            }
+        }
+        .flex_container .pricediv{
+            width: 200px;
+            background-color:#f9f5fd;
+            border-radius:5px;
+            margin: 20px;
+        }
+        .btnlink{
+            background-color:blueviolet;
+            color:white;
+            text-decoration:none;
+            font-size:1.4em;
+            padding: 20px;
+            width:70%;
+            max-width:400px;
+            text-align:center;
+            border-radius:50px;
+            margin:20px;
+        }
+        .btnlink:hover{
+            background-color:rgb(171, 43, 226);
+        }
+        .spaciousdiv{
+            margin:50px 0px;
+        }
+        form{
+            width:80%;
+            max-width:600px;
+        }
+        input, textarea{
+            width: 100%;
+            font-size:1em;
+        }
+        textarea{
+            height:120px;
+        }
+        label,input, textarea{
+            margin: 0px 0px 10px;
+        }
+        .urlframe{
+            border:1px solid grey;
+            padding:5px;
+            cursor:pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+    <script src="https://www.moneybutton.com/moneybutton.js"></script>
+    <script src="dist/bsv.browser.min.js"></script>
+    <script src="dist/run.browser.min.js"></script>
+    <script src="jigclass.js"></script>
+    <script src="main.js"></script>       
+</head>
+<body>
+    <div class="hero">
+        <div class="rib"></div>
+        <h1>Microsite Builder<span class="demo">Demo</span></h1>
+        <h3>Tiny websites for events, marketing campaigns and small businesses.</h3>
+        <div class="flex_container">
+            <a href="#builder" class="btnlink">Start Building</a>
+        </div>
+    </div>
+    <div class="icontext_container">
+        <div>
+            <span class="material-icons">timer</span>
+            <p>Build in Minutes</p>
+        </div>
+        <div>
+            <span class="material-icons">build</span>
+            <p>No Setup</p>
+        </div>
+        <div>
+            <span class="material-icons">keyboard</span>
+            <p>No Coding</p>
+        </div>
+        <div>
+            <span class="material-icons">password</span>
+            <p>No Password</p>
+        </div>
+        <div>
+            <span class="material-icons">request_quote</span>
+            <p>No Monthly Fee</p>
+        </div>
+        <div>
+            <span class="material-icons">devices</span>
+            <p>Multi-device</p>
+        </div>
+    </div>
+    <div class="bor">
+        <h2>How It Works</h2>
+        <p>Have you ever wanted a website to announce your event or business without having to invest a lot of time and energy in building it? Simple Microsite Builder offers an easy solution for anyone who wants to build a tiny website.<p>
+        <p>Just fill in the form with your own words and we will publish it to the web for you. If you have an image file you want to use, upload it in any public server you like and put the reference URL in the box. You can also embed Google Map, Youtube video, Twitter feed and other code snippets from third-parties.</p>                
+        <p>Can I update my microsite after publishing? Yes, absolutely. Just remember to keep the Editor URL provided at the time of site creation. All the information you entered in the form is stored in a single RUN NFT.</p>
+    </div>
+    <div class="spaciousdiv">
+        <h2>Pricing</h2>
+        <div class="flex_container">
+            <div class="pricediv">
+                <p style="font-size:3em;text-align:center;">$5</p>
+                <p style="font-size:1.6em;text-align:center;">Launch</p>
+                <ul>
+                    <li>Initial cost</li>
+                    <li>Per site creation</li>
+                </ul>
+            </div>
+            <div class="pricediv">
+                <p style="font-size:3em;text-align:center;">10¢</p>
+                <p style="font-size:1.6em;text-align:center;">Edit</p>
+                <ul>
+                    <li>Maintenance cost</li>
+                    <li>Per edit</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="spaciousdiv">
+        <h2>Features</h2>
+        <div class="flex_container">
+            <div style="max-width:600px;">
+                <h4>Real-time Tipping Widget powered by HandCash Connect</h4>
+                <p>If you are doing a livestream, your fans can donate directly to you by using our widget. You can see the transaction in real-time in your HandCash wallet.<p>
+                <h4>TonicPow Share Button</h4>
+                <p>Your microsite has a TonicPow Share Button built in so that the visitors can promote it. All you need to do is to set up a campaign for your microsite at <a href="https://tpow.app/saichaya">TonicPow</a>.<p>
+            </div>
+        </div>
+    </div>
+    <div class="rib"></div>
+    <div class="spaciousdiv" id="builder">
+        <h1>Build Your Microsite</h1>
+        <div class="preview_container">
+            <iframe id="previewframe" src="index.html" width="40%" height="980" style="margin:10px;border:1px solid blueviolet;"></iframe>
+            <form style="margin:10px;">
+                <label for="title">Site Title:</label>
+                <input type="text" id="inp_sitetitle" name="title" placeholder="Dog Walking Service"><br>
+                <label for="subtitle">Subtitle:</label>
+                <input type="text" id="inp_subtitle" name="subtitle" placeholder="Fun and Energetic Dog Lover"><br>
+                <label for="hero_img">Top Image (1920 x 1280) URL:</label>
+                <input type="url" id="inp_hero_image" name="hero_img" value="assets/hero_2.jpg"><br>
+                <label for="sec1_lab">Section 1 Label:</label>
+                <input type="text" id="inp_section1_label" name="sec1_lab" placeholder="ABOUT"><br>
+                <label for="inp_sec1_cont">Section 1 Content:</label>
+                <textarea name="sec1_cont" id="inp_section1_content"></textarea><br>
+                <label for="sec2_lab">Section 2 Label:</label>
+                <input type="text" id="inp_section2_label" name="sec2_lab" placeholder="PRICING"><br>
+                <label for="inp_sec2_cont">Section 2 Content:</label>
+                <textarea name="sec2_cont" id="inp_section2_content"></textarea><br>
+                <label for="sec2_img">Section 2 Image (300 x 300) URL:</label>
+                <input type="url" id="inp_section2_image" name="sec2_img" value="assets/sample_2.jpg"><br>
+                <label for="inp_sec3_lab">Section 3 Label:</label>
+                <input type="text" id="inp_section3_label" name="sec3_lab" placeholder="CONTACT"><br>
+                <label for="sec3_cont">Section 3 Content:</label>
+                <textarea name="sec3_cont" id="inp_section3_content"></textarea><br>
+                <label for="sec3_embed">Section 3 Embed:</label>
+                <textarea name="sec3_embed" id="inp_section3_emb" placeholder="Copy & Paste HTML from Google Map, YouTube, Twitter embeds. For Twitch, fill in the placeholder with buildmicro.site"></textarea><br>
+                <input type="checkbox" id="inp_section3_tip" onchange="showTiptoInput()" name="sec3_tip" style="display:inline-block;width:20px;">
+                <label for="sec3_tip">Real-time Tipping Widget</label><br>
+                <div id="tipinput" style="display:none;">
+                    <label for="sec3_tipto">HandCash Handle to receive Tip:</label>
+                    <input type="text" id="inp_section3_tipto" name="sec3_tipto" placeholder="saichaya">
+                </div>
+                <label for="css">Style:</label>
+                <select name="css" id="inp_css" onchange="previewStyle()">
+                    <option value=1>Classic</option>
+                    <option value=2>Teal Blue</option>
+                    <option value=3>Ash Gray</option>
+                </select>
+            </form>
+        </div>
+        <div class="onecolumn_container">
+            <button class="btnlink" onclick="document.getElementById('paymodal').style.display='block'">Publish</button>
+        <div>
+        <div id="paymodal" class="modal">
+            <div class="modal-content">
+                    <span onclick="document.getElementById('paymodal').style.display='none'"
+                    class="close">&times;</span>
+                    <div id='my-money-button'></div>
+                    <div id='widget'></div>
+            </div>
+        </div>
+        <div id="mainmodal" class="modal">
+            <div class="modal-content">
+                <span onclick="document.getElementById('mainmodal').style.display='none'"
+                class="close">&times;</span>
+                <p>Tada! Here's your new <a id="newsitelink" href="index.html" target="_blank">microsite</a>.</p>
+                <p id="newsiteurl" class="urlframe" onclick="copyTextToClipboard(this.innerHTML)"></p>
+                <p>And here's your microsite <a id="editsitelink" href="builder.html" target="_blank">editor</a>.</p>
+                <p id="editsiteurl" class="urlframe" onclick="copyTextToClipboard(this.innerHTML)"></p>
+                <p>Set up a campaign for your microsite at <a href="https://tpow.app/saichaya">TonicPow</a>.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x = location.search
+        var amount = 0.05
+        var existingsitejig
+        window.onload = async function(){
+            let origin = getUrlVars()["ori"]
+            if(origin){
+                amount = 0.01
+                const site = await run.load(origin)
+                await site.sync()
+                console.log(site)
+                setform(site)
+                existingsitejig = site
+            }
+        }
+        function cssurl(){
+            var css = document.getElementById("inp_css").value
+            var css_url
+            switch(css){
+                case "1": css_url="css/style_1.css" 
+                break
+                case "2": css_url="css/style_2.css" 
+                break
+                case "3": css_url="css/style_3.css" 
+                break
+                default: css_url="css/style_1.css" 
+            }
+            return css_url
+        }
+        async function publish(){
+            var title = document.getElementById("inp_sitetitle").value
+            var subtitle = document.getElementById("inp_subtitle").value
+            var label_1 = document.getElementById("inp_section1_label").value
+            var content_1 = document.getElementById("inp_section1_content").value
+            var label_2 = document.getElementById("inp_section2_label").value
+            var content_2 = document.getElementById("inp_section2_content").value
+            var label_3 = document.getElementById("inp_section3_label").value
+            var content_3 = document.getElementById("inp_section3_content").value
+            var img_hero = document.getElementById("inp_hero_image").value
+            var img_sqr = document.getElementById("inp_section2_image").value
+            var html_emb = document.getElementById("inp_section3_emb").value
+            var tip = document.getElementById("inp_section3_tip").checked
+            var tipto = document.getElementById("inp_section3_tipto").value
+            var css_url = cssurl()
+            const tx = new Run.Transaction()
+            var mysite, mycss
+            if(!existingsitejig){
+                //New Site Creation
+                mysite = new Site()
+                mycss = new CSS(css_url)
+            }else{
+                //Edit Existing Site
+                mysite = existingsitejig
+                mycss = existingsitejig.css
+            }
+            tx.update(() => {
+                mysite.setTitle(title)
+                mysite.setSubtitle(subtitle)
+                mysite.setSectionLabel(1,label_1)
+                mysite.setSectionLabel(2,label_2)
+                mysite.setSectionLabel(3,label_3)
+                mysite.setSectionContent(1,content_1)
+                mysite.setSectionContent(2,content_2)
+                mysite.setSectionContent(3,content_3)
+                mysite.setHeroImg(img_hero)
+                mysite.setSquareImg(img_sqr)
+                mysite.setEmbed(html_emb)
+                mysite.useTipWidget(tip)
+                mysite.setTipTo(tipto)
+                mysite.setCSS(mycss)
+            })
+            await tx.publish()
+            console.log(mysite)
+            document.getElementById('newsitelink').href = 'index.html?ori='+mysite.origin
+            document.getElementById('editsitelink').href = 'builder.html?ori='+mysite.origin
+            document.getElementById('newsiteurl').innerHTML = "https://buildmicro.site/?ori="+mysite.origin
+            document.getElementById('editsiteurl').innerHTML = "https://buildmicro.site/builder.html?ori="+mysite.origin
+            document.getElementById('mainmodal').style.display='block'
+        }
+        function setform(site){
+            document.getElementById("inp_sitetitle").value = site.title
+            document.getElementById("inp_subtitle").value = site.subtitle
+            document.getElementById("inp_section1_label").value = site.label[0]
+            document.getElementById("inp_section1_content").value = site.content[0]
+            document.getElementById("inp_section2_label").value = site.label[1]
+            document.getElementById("inp_section2_content").value = site.content[1]
+            document.getElementById("inp_section3_label").value = site.label[2]
+            document.getElementById("inp_section3_content").value = site.content[2]
+            document.getElementById("inp_hero_image").value = site.heroimgurl
+            document.getElementById("inp_section2_image").value = site.squareimgurl
+            document.getElementById("inp_section3_emb").value = site.embed
+            document.getElementById("inp_section3_tip").checked = site.tipwidget
+            if(site.useTipWidget){
+                showTiptoInput()
+                document.getElementById("inp_section3_tipto").value = site.tipto
+            }
+            document.getElementById("previewframe").src = 'index.html?ori='+site.origin
+            switch(site.css.url){
+                case "css/style_1.css": document.getElementById('inp_css').value = "1"
+                break
+                case "css/style_2.css": document.getElementById('inp_css').value = "2"
+                break
+                case "css/style_3.css": document.getElementById('inp_css').value = "3"
+                break
+                default: document.getElementById('inp_css').value = "1"
+            }
+        }
+        function previewStyle(){
+            var x = document.getElementById("previewframe")
+            var y = (x.contentWindow || x.contentDocument)
+            if (y.document)y = y.document
+            y.getElementById("mystyle").href = cssurl()
+        }
+        function showTiptoInput(){
+            var x = document.getElementById('inp_section3_tip').checked
+            if(x){
+                document.getElementById("tipinput").style.display = "block"
+            }else{
+                document.getElementById("tipinput").style.display = "none"
+            }
+        }
+
+        //PayPresto
+        var exchangerate = 160 // 160 USD/bsv
+            const { Presto, embed } = Paypresto;
+            const payment = Presto.create({
+                key: 'L5j9uZAVxXUL54qVLFrzNP1Mco7jgudtGu89K2zELaA7m5trPbKz',
+                description: 'Microsite',
+                outputs: [
+                    { to: '1AfmTQXHy971So8PoVVnki8EXySwEk2q8j', satoshis: amount / exchangerate * 100000000 }
+                ]
+                })
+            payment
+                .mount(embed('#widget'))
+                .on('funded', payment => payment.pushTx())
+                .on('success', txid => {
+                    console.log('TX sent', txid)
+                    publish()
+                    document.getElementById('paymodal').style.display='none'
+                })
+                .on('error', err => console.log(err))
+    </script>
+</body>

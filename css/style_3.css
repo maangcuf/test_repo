@@ -1,0 +1,18 @@
+body{
+    background-color:#ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.clr{
+    background-color:#CBD4C2;
+}
+.menu a{
+    background-color:#50514F;
+    padding:8px 12px;
+    border-radius: 20px;
+    border: 2px solid #CBD4C2;
+}
+footer{
+    background-color:#50514F;
+    color:#ffffff;
+    padding: 10px;
+}
